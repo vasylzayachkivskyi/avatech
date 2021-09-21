@@ -6054,7 +6054,6 @@ body {
 .main__inner-slider {
   width: 70%;
   padding-top: 488px;
-  padding-right: 11%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6607,6 +6606,12 @@ body {
   border-radius: 5px;
   width: 7px;
   height: 191px;
+}
+
+#pl,
+#by,
+#de {
+  display: none;
 }
 
 .footer__adress-item {

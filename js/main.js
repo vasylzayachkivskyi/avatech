@@ -22,12 +22,11 @@ $(function () {
   });
 
   // form styler
-
-  // (function ($) {
-  //   $(function () {
-  //     $("input, select").styler();
-  //   });
-  // })(jQuery);
+   (function ($) {
+     $(function () {
+       $("input, select").styler();
+     });
+   })(jQuery);
 
 
   // open select filter-----------------------------------------------------
@@ -35,7 +34,9 @@ $(function () {
     $(this).next().toggleClass("products__select-list--active");
   });
 
+   
 
+});
 
 // select adress--------------------------------------------------------------
 
@@ -70,13 +71,42 @@ $(function () {
         document.getElementById('Belarus').style.display = "none";
         document.getElementById('Germany').style.display = "block";
      }
-
   }
 
-
-  function showOnChange(element) {
-    var value = element.value
-    document.getElementById(value).style.display = "block";
+  function OnChange(e) {
+    var elem = document.getElementById("slct_footer");
+    var value = elem.options[elem.selectedIndex].value;
+    if(value == "ua")
+      {
+        document.getElementById('ua').style.display = "block";
+        document.getElementById('pl').style.display = "none";
+        document.getElementById('by').style.display = "none";
+        document.getElementById('de').style.display = "none";
+      }
+   else if(value == "pl")
+     {
+          document.getElementById('ua').style.display = "none";
+          document.getElementById('pl').style.display = "block";
+          document.getElementById('by').style.display = "none";
+          document.getElementById('de').style.display = "none";
+     }
+   else if(value == "by")
+     {
+        document.getElementById('ua').style.display = "none";
+        document.getElementById('pl').style.display = "none";
+        document.getElementById('by').style.display = "block";
+        document.getElementById('de').style.display = "none";
+     }
+      else if(value == "de")
+     {
+        document.getElementById('ua').style.display = "none";
+        document.getElementById('pl').style.display = "none";
+        document.getElementById('by').style.display = "none";
+        document.getElementById('de').style.display = "block";
+     }
   }
 
-});
+  // function OnChange(element) {
+  //   var value = element.value
+  //   document.getElementById(value).style.display = "block";
+  // }
