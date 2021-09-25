@@ -6641,6 +6641,7 @@ body {
   color: #000;
   font-weight: 700;
   font-size: 18px;
+  line-height: 20px;
   margin-bottom: 10px;
 }
 .map__adress-item .phone,
@@ -7168,8 +7169,8 @@ body {
   }
 
   .slider__info-text {
-    font-size: 10px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 17px;
   }
 
   .slider__item-btn {
@@ -7320,12 +7321,17 @@ body {
     color: #000;
     font-weight: 700;
     font-size: 14px;
+    line-height: 16px;
     margin-bottom: 5px;
   }
 
   .map__adress-item .phone,
 .map__adress-item .email {
     margin-top: 10px;
+  }
+
+  .map__adress-item span {
+    font-size: 12px;
   }
 
   .map__inner-select {
@@ -7338,6 +7344,15 @@ body {
 
   .map {
     padding-bottom: 40px;
+  }
+
+  .map__inner-adress {
+    height: 430px;
+  }
+
+  .map__inner-map,
+#map {
+    height: 490px;
   }
 }
 @media (max-width: 576px) {
@@ -7435,6 +7450,11 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+
+  .footer__contacts-btn {
+    width: 100%;
+    text-align: center;
   }
 
   .footer__copy {
